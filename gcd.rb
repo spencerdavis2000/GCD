@@ -49,6 +49,11 @@ def gcd(a,b)
 	end
 	puts "GCD is: #{@output}"
 end
+def clear
+	@q = 1
+	@found = false
+	@output = 0
+end
 
 
 binding.pry
