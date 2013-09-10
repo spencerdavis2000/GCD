@@ -34,10 +34,12 @@ def gcd(a,b)
 		if r == 0
 			@output = b
 			@found = true
+			puts "#{a} = #{b}*#{@q} + #{r}"
+			puts "GCD is: #{@output}"
 		end
 		if r > b
 			@q = @q + 1
-		elsif r < b
+		elsif r < b && r != 0
 			puts "#{a} = #{b}*#{@q} + #{r}"
 			a = b
 			b = r
@@ -47,7 +49,6 @@ def gcd(a,b)
 			@q = @q + 1
 		end	
 	end
-	puts "GCD is: #{@output}"
 end
 def clear
 	@q = 1
